@@ -1,0 +1,65 @@
+﻿,full form,Vehicle Input Parameter,Full Form,Units,Description,Powertrain,Data Type(s)
+alt_eff: f64,Alternator Efficiency [%],alt_eff,Alternator Efficiency,%,Alternator efficiency,"Conv, BEV, HEV, FCEV", float
+aux_kw: f64,Auxiliary Load [kW],aux_kw,Auxiliary Load,kW,"Auxiliary load power, $kW$","Conv, BEV, HEV, FCEV", float
+cargo_kg: f64,Cargo Mass [kg],cargo_kg,Cargo Mass,kg,"Cargo mass including passengers, $kg$","Conv, BEV, HEV, FCEV", float
+chg_eff: f64,Charging Efficiency [%],chg_eff,Charging Efficiency,%,Charger efficiency,"BEV, HEV, FCEV", float
+comp_mass_multiplier: f64,Component Mass Multiplier,comp_mass_multiplier,Component Mass Multiplier,,Component mass multiplier for vehicle mass calculation,"Conv, BEV, HEV, FCEV", float
+drag_coef: f64,Aero Drag Coefficient,drag_coef,Aero Drag Coefficient,,Aerodynamic drag coefficient,"Conv, BEV, HEV, FCEV", float
+drive_axle_weight_frac: f64,Drive Axle Weight Fraction [%],drive_axle_weight_frac,Drive Axle Weight Fraction,%,Fraction of weight on the drive axle while stopped,"Conv, BEV, HEV, FCEV", float
+ess_base_kg: f64,ESS Base Mass [kg],ess_base_kg,ESS Base Mass,kg,"Traction battery base mass, $kg$","BEV, HEV, FCEV", float
+ess_chg_to_fc_max_eff_perc: f64,ESS Charge to Maximize Fuel Converter Efficiency [%],ess_chg_to_fc_max_eff_perc,ESS Charge to Maximize Fuel Converter Efficiency,%,ESS charge effort toward max FC efficiency,"BEV, HEV, FCEV", float
+ess_dischg_to_fc_max_eff_perc: f64,ESS Discharge to Maximize Fuel Converter Efficiency [%],ess_dischg_to_fc_max_eff_perc,ESS Discharge to Maximize Fuel Converter Efficiency,%,ESS discharge effort toward max FC efficiency,"BEV, HEV, FCEV", float
+ess_kg_per_kwh: f64,ESS Mass per Capacity [kg/kWh],ess_kg_per_kwh,ESS Mass per Capacity,kg/kWh,"Traction battery mass per energy, $\frac{kg}{kWh}$","BEV, HEV, FCEV", float
+ess_life_coef_a: f64,ESS Life Coeficient A,ess_life_coef_a,ESS Life Coeficient A,,"Traction battery cycle life coefficient A, see reference","BEV, HEV, FCEV", float
+ess_life_coef_b: f64,ESS Life Coeficient B,ess_life_coef_b,ESS Life Coeficient B,,"Traction battery cycle life coefficient B, see reference","BEV, HEV, FCEV", float
+ess_max_kw: f64,ESS Max Power [kW],ess_max_kw,ESS Max Power,kW,"Traction battery maximum power output, $kW$","BEV, HEV, FCEV", float
+ess_max_kwh: f64,ESS Max Capacity [kWh],ess_max_kwh,ESS Max Capacity,kWh,"Traction battery energy capacity, $kWh$","BEV, HEV, FCEV", float
+ess_round_trip_eff: f64,ESS Round Trip Efficiency [%],ess_round_trip_eff,ESS Round Trip Efficiency,%,Traction battery round-trip efficiency,"BEV, HEV, FCEV", float
+ess_to_fuel_ok_error: f64,ESS to Fuel Error Threshold [%],ess_to_fuel_ok_error,ESS to Fuel Error Threshold,%,"Maximum acceptable ratio of change in ESS energy to expended fuel energy (used in hybrid SOC balancing), $\frac{\Delta E_{ESS}}{\Delta E_{fuel}}$","BEV, HEV, FCEV", float
+fc_base_kg: f64,Fuel Converter Base Mass [kg],fc_base_kg,Fuel Converter Base Mass,kg,"Fuel converter base mass, $kg$","Conv, HEV, FCEV", float
+fc_eff_map: Array1<f64>,Fuel Converter Efficiency Map [%],fc_eff_map,Fuel Converter Efficiency Map,%,Fuel converter efficiency map,"Conv, HEV, FCEV",list [float]
+fc_eff_type: String,Fuel Converter Efficiency Type,fc_eff_type,Fuel Converter Efficiency Type,,"Fuel converter efficiency type, one of [SI, ATKINSON, DIESEL, H2FC, HD_DIESEL] Used for calculating fc_eff_map, and other calculations if H2FC","Conv, HEV, FCEV", string
+fc_kw_per_kg: f64,Fuel Converter Specific Power [kW/kg],fc_kw_per_kg,Fuel Converter Specific Power,kW/kg,"Fuel converter specific power (power-to-weight ratio), $\frac{kW}{kg}$","Conv, HEV, FCEV", float
+fc_max_kw: f64,Fuel Converter Max Power [kW],fc_max_kw,Fuel Converter Max Power,kW,"Fuel converter peak continuous power, $kW$","Conv, HEV, FCEV", float
+fc_peak_eff_override: Option<f64>,Fuel Converter Peak Efficiency Override [%],fc_peak_eff_override,Fuel Converter Peak Efficiency Override,%,"Fuel converter efficiency peak override, scales entire curve","Conv, HEV, FCEV",float
+fc_pwr_out_perc: Array1<f64>,Fuel Converter Power Output Map [%],fc_pwr_out_perc,Fuel Converter Power Output Map,%,"Fuel converter output power percentage map, x values of fc_eff_map","Conv, HEV, FCEV",list [float]
+fc_sec_to_peak_pwr: f64,Fuel Converter Time to Peak Power [s],fc_sec_to_peak_pwr,Fuel Converter Time to Peak Power,s,"Fuel converter time to peak power, $s$","Conv, HEV, FCEV", float
+force_aux_on_fc: bool,Force Auxiliary Load from Fuel Converter,force_aux_on_fc,Force Auxiliary Load from Fuel Converter,,Force auxiliary power load to come from fuel converter,"Conv, HEV, FCEV", bool
+frontal_area_m2: f64,Frontal Area [m^2],frontal_area_m2,Frontal Area,m^2,"Frontal area, $m^2$","Conv, BEV, HEV, FCEV", float
+fs_kwh: f64,Fuel Storage Energy Capacity [kWh],fs_kwh,Fuel Storage Energy Capacity,kWh,"Fuel storage energy capacity, $kWh$","Conv, HEV, FCEV", float
+fs_kwh_per_kg: f64,Fuel Specific Energy [kWh/kg],fs_kwh_per_kg,Fuel Specific Energy,kWh/kg,"Fuel specific energy, $\frac{kWh}{kg}$","Conv, HEV, FCEV", float
+fs_max_kw: f64,Fuel Storage Max Power Output [kW],fs_max_kw,Fuel Storage Max Power Output,kW,"Fuel storage max power output, $kW$","Conv, HEV, FCEV", float
+fs_secs_to_peak_pwr: f64,Fuel Storage Time to Peak Power [s],fs_secs_to_peak_pwr,Fuel Storage Time to Peak Power,s,"Fuel storage time to peak power, $s$","Conv, HEV, FCEV", float
+glider_kg: f64,Vehicle Glider Mass [kg],glider_kg,Vehicle Glider Mass,kg,"Vehicle mass excluding cargo, passengers, and powertrain components, $kg$","Conv, BEV, HEV, FCEV", float
+idle_fc_kw: f64,Fuel Converter Idle Power [kW],idle_fc_kw,Fuel Converter Idle Power,kW,"Fuel converter idle power, $kW$","Conv, HEV, FCEV", float
+kw_demand_fc_on: f64,Power Demand for Fuel Converter ON [kW],kw_demand_fc_on,Power Demand for Fuel Converter ON,kW,"Power demand above which to require fuel converter on, $kW$","Conv, HEV, FCEV", float
+max_accel_buffer_mph: f64,Max Acceleration Buffer [MPH],max_accel_buffer_mph,Max Acceleration Buffer,MPH,Speed where the battery reserved for accelerating is zero,"Conv, BEV, HEV, FCEV", float
+max_accel_buffer_perc_of_useable_soc: f64,Max Acceleration Buffer as % of Usuable SOC [%],max_accel_buffer_perc_of_useable_soc,Max Acceleration Buffer as % of Usuable SOC,%,Percent of usable battery energy reserved to help accelerate,"Conv, BEV, HEV, FCEV", float
+max_regen: f64,Maximum Regenerative Braking Efficiency [%],max_regen,Maximum Regenerative Braking Efficiency,%,Maximum brake regeneration efficiency,"BEV, HEV, FCEV", float
+max_soc: f64,Maximum State of Charge [%],max_soc,Maximum State of Charge,%,Traction battery maximum state of charge,"BEV, HEV, FCEV", float
+mc_eff_map: Array1<f64>,Motor Controller Efficiency Map [%],mc_eff_map,Motor Controller Efficiency Map,%,Electric motor efficiency map,"BEV, HEV, FCEV",list [float]
+mc_max_kw: f64,Motor Controller Max Power [kW],mc_max_kw,Motor Controller Max Power,kW,"Peak continuous electric motor power, $kW$","BEV, HEV, FCEV", float
+mc_pe_base_kg: f64,Motor Controller Power Electronics Base Mass [kg],mc_pe_base_kg,Motor Controller Power Electronics Base Mass,kg,"Motor power electronics base mass, $kg$","BEV, HEV, FCEV", float
+mc_pe_kg_per_kw: f64,Motor Controller Power Electronics Mass Per Power [kg/kW],mc_pe_kg_per_kw,Motor Controller Power Electronics Mass Per Power,kg/kW,"Motor power electronics mass per power output, $\frac{kg}{kW}$","BEV, HEV, FCEV", float
+mc_peak_eff_override: Option<f64>,Motor Controller Peak Efficiency Override [%],mc_peak_eff_override,Motor Controller Peak Efficiency Override,%,"Motor efficiency peak override, scales entire curve","BEV, HEV, FCEV",float
+mc_pwr_out_perc: Array1<f64>,Motor Controller Power Output Map [%],mc_pwr_out_perc,Motor Controller Power Output Map,%,"Electric motor output power percentage map, x values of mc_eff_map","BEV, HEV, FCEV",list [float]
+mc_sec_to_peak_pwr: f64,Motor Controller Time to Peak Power [s],mc_sec_to_peak_pwr,Motor Controller Time to Peak Power,s,"Electric motor time to peak power, $s$","BEV, HEV, FCEV", float
+min_fc_time_on: f64,Minimum Fuel Converter Time On [s],min_fc_time_on,Minimum Fuel Converter Time On,s,"Minimum time fuel converter must be on before shutoff (for HEV, PHEV)","Conv, HEV, FCEV", float
+min_soc: f64,Minimum State of Charge [%],min_soc,Minimum State of Charge,%,Traction battery minimum state of charge,"BEV, HEV, FCEV", float
+mph_fc_on: f64,Speed for Fuel Converter to Turn On [MPH],mph_fc_on,Speed for Fuel Converter to Turn On,MPH,"Speed at which the fuel converter must turn on, $mph$","Conv, HEV, FCEV", float
+num_wheels: f64,Number of Wheels,num_wheels,Number of Wheels,,Number of wheels,"Conv, BEV, HEV, FCEV", float
+perc_high_acc_buf: f64,Percentage of High Acceleration SOC Buffer [%],perc_high_acc_buf,Percentage of High Acceleration SOC Buffer,%,Percent SOC buffer for high accessory loads during cycles with long idle time,"Conv, BEV, HEV, FCEV", float
+scenario_name: String,Scenario Name,scenario_name,Scenario Name,,Name of the vehicle and scenario - Includes names,"Conv, BEV, HEV, FCEV", string
+selection: u32,Selection Index,selection,Selection Index,,Name of the vehicle and scenario - Includes names,"Conv, BEV, HEV, FCEV", int
+stop_start: bool,Stop/Start Flag,stop_start,Stop/Start Flag,,Stop/start micro-HEV flag,"Conv, BEV, HEV, FCEV", bool
+trans_eff: f64,Transmission Efficiency [%],trans_eff,Transmission Efficiency,%,Transmission efficiency,"Conv, BEV, HEV, FCEV", float
+trans_kg: f64,Transmission Mass [kg],trans_kg,Transmission Mass,kg,"Transmission mass, $kg$","Conv, BEV, HEV, FCEV", float
+veh_cg_m: f64,Vehicle Center of Gravity [m],veh_cg_m,Vehicle Center of Gravity,m,"Vehicle center of mass height, $m$ NOTE: positive for FWD, negative for RWD, AWD, 4WD","Conv, BEV, HEV, FCEV", float
+veh_override_kg: Option<f64>,Vehicle Mass Override [kg],veh_override_kg,Vehicle Mass Override,kg,"Total vehicle mass, overrides mass calculation, $kg$","Conv, BEV, HEV, FCEV",float
+veh_pt_type: String,Vehicle Powertrain Type,veh_pt_type,Vehicle Powertrain Type,,"Vehicle powertrain type, one of [CONV, HEV, PHEV, BEV]","Conv, BEV, HEV, FCEV", string
+veh_year: u32,Vehicle Life [yr],veh_year,Vehicle Life,yr,Number of years to calculate TCO for - generally the expected life of the vehicle in years,"Conv, BEV, HEV, FCEV", int
+wheel_base_m: f64,Vehicle wheelbase [m],wheel_base_m,Vehicle wheelbase,m,"Wheelbase, $m$","Conv, BEV, HEV, FCEV", float
+wheel_coef_of_fric: f64,Wheel Coefficient of Friction,wheel_coef_of_fric,Wheel Coefficient of Friction,,Wheel coefficient of friction,"Conv, BEV, HEV, FCEV", float
+wheel_inertia_kg_m2: f64,Wheel Inertia [kg/m^2],wheel_inertia_kg_m2,Wheel Inertia,kg/m^2,"Mass moment of inertia per wheel, $kg \cdot m^2$","Conv, BEV, HEV, FCEV", float
+wheel_radius_m: f64,Wheel Radius [m],wheel_radius_m,Wheel Radius,m,"Wheel radius, $m$","Conv, BEV, HEV, FCEV", float
+wheel_rr_coef: f64,Wheel Rolling Resistance Coefficient,wheel_rr_coef,Wheel Rolling Resistance Coefficient,,Rolling resistance coefficient,"Conv, BEV, HEV, FCEV", float
